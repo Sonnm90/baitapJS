@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #year {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" name="frm" onsubmit="return checkNgay();">
+        <label for="">Nhập tháng bất kỳ</label>
+        <input type="number" name="month" min="1" max="12" oninput="if( this.value=='2') { 
+            document.getElementById('year').style.display='block'} 
+            else { document.getElementById('year').style.display='none'}">
+        <br>
+        <section id="year">
+            <label for="">Nhập năm</label>
+            <input type="number" name="year">
+        </section>
+        <input type="submit" value="Xác định số ngày" name="" id="">
+        <input type="text" name="ketQua">
+    </form>
+</body>
+<script src="checkNgay.js"></script>
+
+</html>
