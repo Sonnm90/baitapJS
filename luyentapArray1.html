@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //bài 1: Khởi tạo mảng có 10 phần tử, in ra các phần tử lớn hơn 10
+
+        // let arr = [];
+        // let cnt = 0;
+        // for (let i = 0; i < 10; i++) {
+        //     arr[i] = Math.floor(Math.random() * 20 + 1);
+        //     if (arr[i] >= 10) {
+        //         cnt += 1;
+        //         let b = arr[i];
+        //         document.write(b + ', ');
+
+        //     }
+        // }
+        // document.write(arr);
+        // document.write('is intergers > 10. Total is : ' + cnt + ' numbers')
+
+
+        //bài 2: Khởi tạo mảng có 10 phần tử, in ra phần tử lớn nhất
+
+        // let arr = [];
+        // let max = 0;
+        // let b = 0;
+        // for (let i = 0; i < 10; i++) {
+        //     arr[i] = Math.floor(Math.random() * 20 + 1);
+        //     if (arr[i] > max) {
+        //         max = arr[i];
+        //         b = i;
+        //     }
+        // }
+        // document.write(arr + "<br>");
+        // document.write('Max = ' + max + ' vị trí thứ ' + b);
+
+
+        //bài 3: Nhập vào mảng, in ra giá trị trung bình , giá trị lớn nhất
+
+        // let arr = [];
+        // let len = prompt('độ rộng của mảng :')
+        // let sum = 0;
+
+        // for (let i = 0; i < len; i++) {
+        //     arr[i] = Math.floor(Math.random() * 100 + 1);
+        //     sum += arr[i];
+        // }
+
+        // document.write("dãy số random là: " + arr + '<br>');
+        // let max = arr[0];
+        // for (let j = 1; j < arr.length; j++) {
+        //     if (arr[j] > max) {
+        //         max = arr[j];
+        //     }
+        // }
+
+        // let avg = sum / arr.length;
+        // document.write('trung bình cộng của dãy số là :' + avg + '<br>');
+        // document.write('giá trị lớn nhất là : ' + max);
+
+        //bài 4
+
+        // let arr = [];
+        // let len = prompt('độ rộng của mảng :')
+
+        // for (let i = 0; i < len; i++) {
+        //     arr[i] = Math.floor(Math.random() * 100 + 1);
+        // }
+        // document.write('Mảng ban đầu :' + arr.join() + '<br>')
+        // document.write('Mảng sau khi đảo :' + arr.reverse().join());
+
+
+        //bài 5
+
+        // let arr = [];
+        // let len = prompt('độ rộng của mảng :')
+        // let count = 0;
+
+        // for (let i = 0; i < len; i++) {
+        //     arr[i] = Math.floor(-50 + Math.random() * 100 + 1);
+        //     if (arr[i] < 0) {
+        //         count += 1;
+        //     }
+        // }
+        // document.write(arr + "<br>");
+        // document.write('Số phần tử âm là : ' + count)
+
+        //bài 6
+
+        // let arr = [];
+        // for (let i = 0; i < 10; i++) {
+        //     arr[i] = Math.floor(Math.random() * 100 + 1);
+        // }
+        // console.log(arr);
+
+        // let V = prompt('nhập giá trị V :');
+        // let check = false;
+
+        // for (let j = 0; j < 10; j++) {
+        //     if (V === arr[j]) {
+        //         check = true;
+        //         break;
+        //     }
+        // }
+
+        // if (check === true) {
+        //     alert('V nằm trong mảng');
+        // } else {
+        //     alert('V không nằm trong mảng');
+        // }
+        // document.write(arr);
+
+        //bài 7
+
+        // let arr = [];
+        // let V = prompt('nhập số  V :');
+
+        // for (let i = 0; i < 10; i++) {
+        //     arr[i] = Math.floor(Math.random() * 20 + 1);
+
+        // }
+        // document.write('Mảng ban đầu :' + arr + '<br>');
+
+        // for (let i = 0; i < 10; i++) {
+        //     if (V === arr[i]) {
+        //         for (let j = i; j < 10; j++) {
+        //             arr[j] = arr[j + 1];            //dịch phần tử ở bên phải V sang vị trí của V.
+        //         }
+        //         arr[9] = 0                          //gán 0 cho phần tử cuối cùng của mảng
+        //     }
+        // }
+        // document.write('Mảng mới : ' + arr);
+
+        //bài 8
+
+        // let arr = [];
+        // for (let i = 0; i < 10; i++) {
+        //     arr[i] = Math.floor(Math.random() * 100 + 1);
+        // }
+        // document.write('Mảng ban đầu:' + arr + '<br>');
+        // arr.sort(function (a, b) {
+        //     return b - a;
+        // })
+        // document.write('Mảng sau khi sắp xếp :' + arr);
+
+        //bài 9
+
+        let arrA = [];
+        let arrB = [];
+        for (let i = 0; i < 10; i++) {
+            arrA[i] = Math.floor(Math.random() * 100 + 1);
+            arrB[i] = Math.floor(Math.random() * 100 + 1);
+        }
+        document.write('Mảng A:' + arrA + '<br>');
+        document.write('Mảng B:' + arrB + '<br>');
+
+        let arrC = [];
+        arrC = arrA.concat(arrB);
+        document.write('Mảng C :' + arrC);
+
+    </script>
+</body>
+
+</html>
