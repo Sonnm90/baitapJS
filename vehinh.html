@@ -14,59 +14,59 @@
 
         // Vẽ tam giác vuông:
 
-        // for (let i = 1; i <= 5; i++) {
-        //     for (let j = 1; j <= i; j++) {
-        //         document.write("*");
-        //     }
-        //     document.write("<br>");
-        // }
-        // document.write("<br>");
-        // for (let i = 5; i >= 1; i--) {
-        //     for (let j = 1; j <= i; j++) {
-        //         document.write("*");
-        //     }
-        //     document.write("<br>");
-        // }
-        // document.write("<br>");
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        for (let i = 5; i >= 1; i--) {
+            for (let j = 1; j <= i; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
 
-        // for (let i = 5; i >= 1; i--) {
-        //     for (let j = 1; j <= 5; j++) {
-        //         if (j >= i) {
-        //             document.write('*');
-        //         } else {
-        //             document.write('&nbsp', '&nbsp');    // in khoảng trắng 
-        //         }
-        //     }
-        //     document.write('<br>');
-        // } document.write('<br>');
-        // for (let i = 1; i <= 5; i++) {
-        //     for (let j = 1; j <= 5; j++) {
-        //         if (j >= i) {
-        //             document.write('*');
-        //         } else {
-        //             document.write('&nbsp', '&nbsp');
-        //         }
-        //     }
-        //     document.write('<br>');
-        // }
+        for (let i = 5; i >= 1; i--) {
+            for (let j = 1; j <= 5; j++) {
+                if (j >= i) {
+                    document.write('*');
+                } else {
+                    document.write('&nbsp', '&nbsp');    // in khoảng trắng
+                }
+            }
+            document.write('<br>');
+        } document.write('<br>');
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= 5; j++) {
+                if (j >= i) {
+                    document.write('*');
+                } else {
+                    document.write('&nbsp', '&nbsp');
+                }
+            }
+            document.write('<br>');
+        }
 
         //Vẽ hình chữ nhật
 
-        for (let i = 1; i <= 20; i++) {
-            document.write('*');
-        }
-        document.write('<br>');
+        // for (let i = 1; i <= 20; i++) {
+        //     document.write('*');
+        // }
+        // document.write('<br>');
 
-        for (let i = 1; i <= 5; i++) {              // Toàn bộ đọan này là in ra * + 18 khoảng trắng + *
-            document.write('*');                    // in ra *
-            for (let j = 1; j <= 18; j++) {         //  in ra 18 khoảng trắng
-                document.write("&nbsp&nbsp");       //
-            }                                       //
-            document.write(" *<br>");               // in ra *
-        }
-        for (let i = 1; i <= 20; i++) {
-            document.write('*');
-        }
+        // for (let i = 1; i <= 5; i++) {              // Toàn bộ đọan này là in ra * + 18 khoảng trắng + *
+        //     document.write('*');                    // in ra *
+        //     for (let j = 1; j <= 18; j++) {         //  in ra 18 khoảng trắng
+        //         document.write("&nbsp&nbsp");       //
+        //     }                                       //
+        //     document.write(" *<br>");               // in ra *
+        // }
+        // for (let i = 1; i <= 20; i++) {
+        //     document.write('*');
+        // }
 
 
         //Tính lãi suất tiền gửi
@@ -82,9 +82,9 @@
         // }
         // document.write(interest);
 
-//in hình trái tim
+        //Vẽ hình trái tim
 
-        // let num = 10;
+        // let num = 6;
         // for (let i = num / 2; i <= num; i += 2) {
         //     for (let j = 1; j < num - i; j += 2) {
         //         document.write("&nbsp&nbsp&nbsp");
