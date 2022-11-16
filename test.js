@@ -20,5 +20,3 @@
 // }
 // document.getElementById("tableDemo").innerHTML = result;
 
-
-
