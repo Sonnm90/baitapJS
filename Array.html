@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Bài 1
+
+        // let myColor = ["Red", "Green", "White", "Black"];
+        // console.log(myColor.toString());
+        // console.log(myColor.join(' '));
+
+        //Bài 2
+
+        // let num = window.prompt("nhap so");
+        // let str = num.toString;
+        // let result = [str[0]];
+
+        // for (var i = 1; i < str.length; i++) {
+        //     if ((str[i - 1] % 2 === 0) && (str[i] % 2 === 0)) {
+        //         result.push('-', str[i]);
+        //     } else {
+        //         result.push(str[i]);
+        //     }
+        // }
+        // console.log(result.join(''));
+
+        //Bài 3
+
+        let strFox = "The Quick Brown Fox";
+        console.log("before:" + strFox);
+
+        var strFoxsp = strFox.split("");
+        let array = [];
+
+        for (const strFoxspKey of strFoxsp) {
+            array.push(
+                strFoxspKey < "a"
+                    ? strFoxspKey.toLowerCase()
+                    : strFoxspKey.toUpperCase()
+            );
+        }
+        console.log("after:" + array.join(""));
+
+
+
+        // for (const strFoxspKey of strFox) {
+        //     var tu = strFoxspKey.split("");
+        //     for (const i in tu) {
+        //         if (i == 0) {
+        //             tu[i] = tu[i].toLowerCase();
+        //         } else {
+        //             tu[i] = tu[i].toUpperCase();
+        //         }
+        //     }
+        //     array.push(tu.join(""));
+        // }
+        // console.log("after:" + array.join(""));
+
+
+    </script>
+</body>
+
+</html>
