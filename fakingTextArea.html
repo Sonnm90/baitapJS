@@ -8,38 +8,39 @@
     <title>Document</title>
 </head>
 
-<body>
+<body onload="on()">
+    <!-- <h2>Mời bạn cho ý kiến</h2>
+    <form name="f">
+        <textarea name="txt" cols="30" rows="10"> </textarea>
 
-    <body onload="on()">
-        <h2>Mời bạn cho ý kiến</h2>
-        <form name="f">
-            <textarea name="txt" cols="30" rows="10"> </textarea>
-
-            <script>
-                let array = ['b', 'ạ', 'n', ' ', 't', 'h', 'ì', ' ', 'k', 'i', 'n', 'h', ' ', 'r', 'ồ', 'i', '!'];
-                n = ''
-                function one() {
-                    t = document.f.txt.value
-                    j = t.length
-                    if (j > 0) {
-                        for (var i = 0; i <= j; i++) {
-                            n = n + array[i]
-                            if (i == 17) {
-                                document.f.txt.value = ""
-                                n = ""
-                            }
+        <script>
+            let array = ['b', 'ạ', 'n', ' ', 't', 'h', 'ì', ' ', 'k', 'i', 'n', 'h', ' ', 'r', 'ồ', 'i', '!'];
+            n = ''
+            function one() {
+                t = document.f.txt.value
+                j = t.length
+                if (j > 0) {
+                    for (var i = 0; i <= j; i++) {
+                        n = n + array[i]
+                        if (i == 17) {
+                            document.f.txt.value = ""
+                            n = ""
                         }
                     }
-                    document.f.txt.value = n
-                    n = ""
-                    setTimeout("one()", 200)
                 }
-                function on() {
-                    one()
-                }
+                document.f.txt.value = n
+                n = ""
+                setTimeout("one()", 200)
+            }
+            function on() {
+                one()
+            }
 
-            </script>
+        </script> -->
 
-    </body>
+
+
+
+</body>
 
 </html>

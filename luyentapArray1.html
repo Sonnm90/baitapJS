@@ -16,18 +16,19 @@
         //bài 1: Khởi tạo mảng có 10 phần tử, in ra các phần tử lớn hơn 10
 
         // let arr = [];
-        // let cnt = 0;
+        // let count = 0;
         // for (let i = 0; i < 10; i++) {
         //     arr[i] = Math.floor(Math.random() * 20 + 1);
         //     if (arr[i] >= 10) {
-        //         cnt += 1;
+        //         count += 1;
         //         let b = arr[i];
         //         document.write(b + ', ');
 
         //     }
         // }
-        // document.write(arr);
-        // document.write('is intergers > 10. Total is : ' + cnt + ' numbers')
+        // document.write('<br>');
+        // document.write(arr + '<br>');
+        // document.write('Số các số lớn hơn 10 là : ' + count + ' số');
 
 
         //bài 2: Khởi tạo mảng có 10 phần tử, in ra phần tử lớn nhất
@@ -104,7 +105,7 @@
         // }
         // console.log(arr);
 
-        // let V = prompt('nhập giá trị V :');
+        // let V = parseInt(prompt('nhập số  V :'));
         // let check = false;
 
         // for (let j = 0; j < 10; j++) {
@@ -124,20 +125,17 @@
         //bài 7
 
         // let arr = [];
-        // let V = prompt('nhập số  V :');
+        // let V = parseInt(prompt('nhập số  V :'));
 
         // for (let i = 0; i < 10; i++) {
         //     arr[i] = Math.floor(Math.random() * 20 + 1);
-
         // }
         // document.write('Mảng ban đầu :' + arr + '<br>');
 
         // for (let i = 0; i < 10; i++) {
         //     if (V === arr[i]) {
-        //         for (let j = i; j < 10; j++) {
-        //             arr[j] = arr[j + 1];            //dịch phần tử ở bên phải V sang vị trí của V.
-        //         }
-        //         arr[9] = 0                          //gán 0 cho phần tử cuối cùng của mảng
+        //         arr.splice(i, 1);
+        //         arr.push(0);
         //     }
         // }
         // document.write('Mảng mới : ' + arr);
@@ -156,18 +154,20 @@
 
         //bài 9
 
-        let arrA = [];
-        let arrB = [];
-        for (let i = 0; i < 10; i++) {
-            arrA[i] = Math.floor(Math.random() * 100 + 1);
-            arrB[i] = Math.floor(Math.random() * 100 + 1);
-        }
-        document.write('Mảng A:' + arrA + '<br>');
-        document.write('Mảng B:' + arrB + '<br>');
+        // let arrA = [];
+        // let arrB = [];
+        // for (let i = 0; i < 10; i++) {
+        //     arrA[i] = Math.floor(Math.random() * 100 + 1);
+        //     arrB[i] = Math.floor(Math.random() * 100 + 1);
+        // }
+        // document.write('Mảng A:' + arrA + '<br>');
+        // document.write('Mảng B:' + arrB + '<br>');
 
-        let arrC = [];
-        arrC = arrA.concat(arrB);
-        document.write('Mảng C :' + arrC);
+        // let arrC = [];
+        // arrC = arrA.concat(arrB);
+        // document.write('Mảng C :' + arrC);
+
+
 
     </script>
 </body>

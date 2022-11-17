@@ -14,20 +14,30 @@
     <script>
         let english = ["hello", "goodbye", "chicken", "dog", "cat", "fish", "stupid"];
         let vietnam = ["xin chào", "tạm biệt", "gà", "chó", "mèo", "cá", "Hoàng chứ ai"];
-        function search() {
-            let key = document.getElementById('search').value;
-            let idx = -1;
-            for (let i = 0; i < english.length; i++) {
-                if (english[i] === key) {
-                    idx = i;
-                }
-            }
-            if (idx === -1) {
-                alert('Đi chỗ khác chơi');
-            } else {
-                alert(vietnam[idx]);
-            }
-        }
+        // function search() {
+        //     let key = document.getElementById('search').value;
+        //     let idx = -1;
+        //     for (let i = 0; i < english.length; i++) {
+        //         if (english[i] === key) {
+        //             idx = i;
+        //         }
+        //     }
+        //     if (idx === -1) {
+        //         alert('Đi chỗ khác chơi');
+        //     } else {
+        //         alert(vietnam[idx]);
+        //     }
+        // }
+
+        // Cách 2
+        
+        // let input = prompt("nhap tu");
+
+        // for (const key in en) {
+        //     if (input == en[key]) {
+        //         document.write(vi[key]);
+        //     }
+        // }
     </script>
 </body>
 

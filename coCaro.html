@@ -61,7 +61,7 @@
     for (let i = 0; i < arr.length; i++) {
         arr[i] = new Array(5)
         for (let j = 0; j < arr[i].length; j++) {
-            arr[i][j] = "&ensp; - &ensp;"
+            arr[i][j] = "&nbsp; - &nbsp;"
         }
     }
 
@@ -83,7 +83,7 @@
         let x = +prompt("Nhập vào vị trí X: ")
         let y = +prompt("Nhập vào vị trí Y: ")
 
-        if (arr[x][y] !== "&ensp; - &ensp;") {
+        if (arr[x][y] !== "&nbsp; - &nbsp;") {
             alert("Ô này đã được đánh, mời chơi lại")
         } else {
             arr[x][y] = VALUE
@@ -100,7 +100,7 @@
         let x = +prompt("Nhập vào vị trí X: ")
         let y = +prompt("Nhập vào vị trí Y: ")
 
-        if (arr[x][y] !== "&ensp; - &ensp;") {
+        if (arr[x][y] !== "&nbsp; - &nbsp;") {
             alert("Ô này đã được đánh, mời chơi lại")
         } else {
             arr[x][y] = VALUE
