@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /*Bài 1 Kiểm tra 1 số có phải số nguyên tố hay không.
+        Sử dụng phương thức trên để tìm tất cả các số ngtố ngỏ hơn 1000.
+        */
+        // Kiểm tra số nguyên tố
+        function isPrime(number) {
+
+            for (var i = 2; i < number - 1; i++) {
+                if (number % i == 0) {
+                    return false;
+                    break;
+                }
+            }
+            return true;
+
+        }
+        // document.write(isPrime(5));
+
+        // Liệt kê dãy số
+        function findArray() {
+            let arr = [];
+
+            for (let j = 2; j < 1000; j++) {
+                if (isPrime(j) == true) {
+                    // console.log("jghgt")
+                    arr += j + ",";
+                }
+            }
+            return arr;
+        }
+        console.log(findArray());
+
+        /* Bài 2
+        */
+
+
+    </script>
+</body>
+
+</html>
