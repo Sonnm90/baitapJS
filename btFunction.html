@@ -105,11 +105,13 @@
         //     let num = parseInt(char);
         //     if (Number.isInteger(num)) {
         //         return true;
+        //     } else {
+        //         return false;
+
         //     }
-        //     return false;
         // }
 
-        // console.log(checkChar(5));
+        // console.log(checkChar("a"));
 
         /* Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất
         */
@@ -128,7 +130,7 @@
         // console.log(findMinArray(27, 5, 4));
 
         /*Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên
-dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.
+        dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.
         */
 
         // function checkNum (num) {
@@ -152,7 +154,7 @@ dương không. Nếu là nguyên dương trả về true, ngược lại trả 
         // document.write(swapNum(1, 2));
 
         /*Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số
-nguyên đó
+        nguyên đó
         */
 
         // let arr = [];
@@ -169,30 +171,29 @@ nguyên đó
         // document.write(reverseArray(arr));
 
         /* Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự
-bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu
-không trả về -1. 
+        bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu
+        không trả về -1.
         */
-        let str = prompt("Nhap chuoi");
-        let arrStr = str.split("");
-        console.log(arrStr);
+        // let str = prompt("Nhap chuoi");
+        // let arrStr = str.split("");
+        // console.log(arrStr);
+        // let flag = false;
+        // let count = 0;
 
-        function findChar(char) {
+        // function findChar(char) {
+        //     for (const key in arrStr) {
+        //         if (arrStr[key] == char) {
+        //             flag = true;
+        //             count++;
+        //         }
+        //     }
+        //     if (flag == false) {
+        //         count = -1;
+        //     }
+        //     return count;
+        // }
+        // console.log(findChar("a"));
 
-            let count = 0;
-            let flag = false;
-            for (const key in arrStr) {
-                if (arrStr[key] == char) {
-                    flag = true;
-                    count++;
-                }
-            }
-            if (flag = false) {
-                count = -1;
-            }
-            alert(count);
-
-        }
-        console.log(findChar("a"));
     </script>
 </body>
 
