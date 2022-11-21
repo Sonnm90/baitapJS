@@ -15,37 +15,184 @@
         Sử dụng phương thức trên để tìm tất cả các số ngtố ngỏ hơn 1000.
         */
         // Kiểm tra số nguyên tố
-        function isPrime(number) {
+        // function isPrime(number) {
 
-            for (var i = 2; i < number - 1; i++) {
-                if (number % i == 0) {
-                    return false;
-                    break;
-                }
-            }
-            return true;
+        //     for (var i = 2; i < number - 1; i++) {
+        //         if (number % i == 0) {
+        //             return false;
+        //             break;
+        //         }
+        //     }
+        //     return true;
 
-        }
-        // document.write(isPrime(5));
+        // }
+        // // document.write(isPrime(5));
 
-        // Liệt kê dãy số
-        function findArray() {
-            let arr = [];
+        // // Liệt kê dãy số
+        // function findArray() {
+        //     let arr = [];
 
-            for (let j = 2; j < 1000; j++) {
-                if (isPrime(j) == true) {
-                    // console.log("jghgt")
-                    arr += j + ",";
-                }
-            }
-            return arr;
-        }
-        console.log(findArray());
+        //     for (let j = 2; j < 1000; j++) {
+        //         if (isPrime(j) == true) {
 
-        /* Bài 2
+        //             arr += j + ",";
+        //         }
+        //     }
+        //     return arr;
+        // }
+        // console.log(findArray());
+
+        /* Bài 2 Chuyển đổi Feet và Meters
+        */
+        // function footToMeter(foot) {
+        //     let met;
+        //     met = 0.305 * foot;
+        //     return met;
+        // }
+
+        // function meterToFoot(meter) {
+        //     let ft;
+        //     ft = 3.279 * meter;
+        //     return ft;
+        // }
+
+        // console.log(footToMeter(1));
+        // console.log(meterToFoot(20));
+
+        /*Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây
+        dựng được.
+        */
+        // function powNumber(num) {
+        //     let pow;
+        //     pow = num * num;
+        //     return pow;
+        // }
+
+        // console.log(powNumber(5));
+
+        /* Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được.
+        */
+        // function calCircle(radius) {
+        //     let perimeter;
+        //     let area;
+        //     const pi = Math.PI;
+        //     perimeter = radius * 2 * pi;
+        //     area = radius ** 2 * pi;
+        //     return perimeter + "," + area;
+        // }
+
+        // console.log(calCircle(3));
+
+        /* Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa
+        xây dựng được.
         */
 
+        // function factorial(num) {
+        //     var num;
+        //     var factorialResult = 1;
+        //     for (var i = 1; i <= num; i++) {
+        //         factorialResult *= i;
+        //     }
+        //     return factorialResult;
+        // }
+        // console.log(factorial(5));
 
+        /*Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự
+        số hàm trả về true, ngược lại trả về false.
+        */
+
+        // function checkChar(char) {
+        //     let num = parseInt(char);
+        //     if (Number.isInteger(num)) {
+        //         return true;
+        //     }
+        //     return false;
+        // }
+
+        // console.log(checkChar(5));
+
+        /* Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất
+        */
+
+        // function findMinArray(num1, num2, num3) {
+        //     min = num1;
+        //     if (num2 <= min) {
+        //         min = num2;
+        //     }
+        //     if (num3 <= min) {
+        //         min = num3;
+        //     }
+        //     return min;
+        // }
+
+        // console.log(findMinArray(27, 5, 4));
+
+        /*Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên
+dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.
+        */
+
+        // function checkNum (num) {
+        //     let num1 =parseInt(num);
+        //     if ( num1>0) {
+        //         return true;
+        //     }
+        //     return false;
+        // }
+
+
+        /*Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.
+        */
+
+        // function swapNum(num1, num2) {
+        //     let temp = num1;
+        //     num1 = num2;
+        //     num2 = temp;
+        //     return num1 + "," + num2;
+        // }
+        // document.write(swapNum(1, 2));
+
+        /*Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số
+nguyên đó
+        */
+
+        // let arr = [];
+        // let lengthArr = prompt("Nhap do dai mang");
+
+        // for (i = 0; i < lengthArr; i++) {
+        //     arr[i] = prompt('Nhap vao phan tu thu ' + i);
+        // }
+
+        // function reverseArray(array) {
+        //     let newArr = array.reverse();
+        //     return newArr;
+        // }
+        // document.write(reverseArray(arr));
+
+        /* Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự
+bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu
+không trả về -1. 
+        */
+        let str = prompt("Nhap chuoi");
+        let arrStr = str.split("");
+        console.log(arrStr);
+
+        function findChar(char) {
+
+            let count = 0;
+            let flag = false;
+            for (const key in arrStr) {
+                if (arrStr[key] == char) {
+                    flag = true;
+                    count++;
+                }
+            }
+            if (flag = false) {
+                count = -1;
+            }
+            alert(count);
+
+        }
+        console.log(findChar("a"));
     </script>
 </body>
 
