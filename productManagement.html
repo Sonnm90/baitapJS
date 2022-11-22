@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #add {
+        /* #add {
             width: 35px;
             ;
             height: 23px;
@@ -18,7 +18,7 @@
             border-radius: 4px;
             cursor: pointer;
 
-        }
+        } */
 
         .Input {
             width: 35px;
@@ -48,14 +48,14 @@
         let product = ['Samsung', 'Sony', 'Nokia', 'Apple', 'Xiaomi'];
 
         function displayProduct() {
-            let mainBody = ' ';
+            let main = ' ';
             for (let i = 0; i < product.length; i++) {
-                mainBody += '<tr> <td>' + product[i] + '</td> <td id ="input1">'
+                main += '<tr> <td>' + product[i] + '</td> <td id ="input1">'
                     + '<input type = "button" class = "Input" value="Edit" onclick="editProduct(' + i + ')" id =' + '"edit' + i + '";></td>'
                     + '<td><input type="button"  class = "Input" onclick = "dellProduct(' + i + ')" value = "Dell" id = "dell' + i + '";' + '></button> </td>'
                     + '</tr>'
             }
-            document.getElementById('main').innerHTML = mainBody
+            document.getElementById('main').innerHTML = main
         }
         displayProduct();
 
@@ -75,6 +75,7 @@
             product.splice(i, 1);
             displayProduct();
         }
+
 
     </script>
 </body>

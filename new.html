@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Add New Product</h2>
+        <div class="add">
+            <input type="text" placeholder="New product" id="addProduct" />
+            <button onclick="addProduct()">Add</button>
+        </div>
+        <br>
+        <div class="edit">
+            <input type="text" placeholder="Edit product" id="editProduct" />
+            <button onclick="newEdit()">New Edit</button>
+        </div>
+        <br>
+        <h2>Display All Product</h2>
+        <div id="result"></div>
+    </div>
+</body>
+
+<script>
+    let arrayProduct = ["Sony Xperia", "Samsung Galaxy", "Nokia 6", "Xiaomi Redmi Note 4", "Apple iPhone 6S"];
+    let result = document.getElementById("result");
+    function displayProduct() {
+        let productTable = `
+            <table  cellspacing="1" cellpadding="20">
+                <tr>
+                    <th>Product Name</th>
+                    <th colspan="2">Action</th>
+                    <th class="count">${arrayProduct.length} Product</th>
+                </tr>
+        `
+        for (let i = 0; i < arrayProduct.length; i++) {
+            productTable += `
+                        <tr>
+                            <td>${arrayProduct[i]}</td>
+                            <td>
+                                <button class="btn-edit" onclick="editProduct(${i})">Edit</button>
+                            </td>
+                            <td>
+                                <button class="btn-delete" onclick="deleteProduct(${i})">Delete</button>
+                            </td>
+                        </tr>
+    
+                `
+            // productTable += "<tr>"
+            // productTable += "<td>" + arrayProduct[i] + "</td>"
+            // productTable += "<td> <button class='btn-edit' onclick='editProduct(" + i + ")'> Edit </button>" + "</td>"
+            // productTable += "<td> <button class='btn-delete' onclick='deleteProduct(" + i + ")'> Delete </button>" + "</td>"
+            // productTable += "</tr>"
+        }
+        productTable += `</table>`
+        result.innerHTML = productTable;
+    }
+    displayProduct();
+
+    function addProduct() {
+        let valueAdd = document.getElementById("addProduct").value;
+        arrayProduct.push(valueAdd);
+        displayProduct();
+    }
+
+    function deleteProduct(index) {
+        arrayProduct.splice(index, 1);
+        displayProduct();
+    }
+
+    var value = "";
+    function editProduct(index) {
+        document.getElementById("editProduct").value = arrayProduct[index];
+        value = index;
+    }
+
+    function newEdit() {
+        let result = document.getElementById("editProduct").value;
+        arrayProduct[value] = result;
+        displayProduct();
+    }
+
+</script>
+</body>
+
+</html>
