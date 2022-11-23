@@ -7,19 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<canvas id="myCanvas" width="400" height="200" style="border:1px solid
+#d3d3d3;"></canvas>
 
 <body>
     <script>
-        let rectange = function (width, height) {
-            this.width = width;
-            this.height = height;
-            this.getArea = function getArea() {
-                let area = width * height;
-                return area;
-            }
+
+        /*Xây dựng lớp mô tả HCN.
+        */
+        function rectange(width, height) {
+            this.width = width,
+                this.height = height,
+                this.getArea = function getArea() {
+                    return this.width * this.height;
+                }
             this.getPerimeter = function getPerimeter() {
-                let perimeter = (width + height) * 2;
-                return perimeter;
+                return (this.width + this.height) * 2;
             }
         }
 
@@ -27,6 +30,40 @@
 
         console.log(rectange1);
         console.log(rectange1.getArea());
+        console.log(rectange1.getPerimeter());
+        let ctxRec = document.getElementById("myCanvas").getContext("2d");
+        ctxRec.fillStyle = "red";
+        ctxRec.fillRect(10, 10, 40, 20);
+        rectange1.width = 30;
+        rectange1.height = 50;
+        console.log(rectange1.getArea());
+        console.log(rectange1.getPerimeter());
+        ctxRec.beginPath();
+        ctxRec.fillStyle = "blue";
+        ctxRec.fillRect(10, 40, 50, 30);
+
+
+        /* Xây dựng lớp mô tả Temperature
+        */
+        // let temperature = function (temp) {
+        //     this.temp = temp;
+        //     this.changetoF = function changetoF() {
+        //         return (9 / 5 * this.temp + 32);
+
+        //     }
+        //     this.changetoK = function changetoK() {
+        //         return (this.temp + 273);
+
+        //     }
+        // }
+        // let temperature1 = new temperature();
+        // temperature1.temp = 20;
+        // console.log(temperature1);
+
+        // console.log(temperature1.changetoF());
+        // console.log(temperature1.changetoK());
+
+
     </script>
 </body>
 
