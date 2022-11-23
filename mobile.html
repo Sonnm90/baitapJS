@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function mobile(battery, draftmess, receivemess, sendmess, status) {
+            this.battery = battery
+            this.draftmess = []
+            this.receivemess = []
+            this.sendmess = []
+            this.status = status
+
+            this.checkStatus = function () {
+                if (this.status == false || this.battery == 0) {
+                    this.status = false
+                    alert("Vui lòng bật máy")
+                } else {
+                    if (this.status == true) {
+                        return "Điện thoại đang bật!"
+                    } else {
+                        return "Điện thoại đang tắt!"
+                    }
+                    this.battery--;
+                }
+            }
+
+            this.turnMobile = function () {
+                if (this.battery == 0) {
+                    this.status = false
+                    alert("Vui lòng sạc điện thoại!")
+                } else {
+                    if (this.status == true) {
+                        this.status = false;
+                        return "Điện thoại đã được tắt"
+                    } else {
+                        this.status = true;
+                        return "Điện thoại đã được bật"
+                    }
+                }
+            }
+
+            this.getmess = function () {
+                if (this.status == false || this.battery == 0) {
+                    this.status = false
+                    alert("Vui lòng bật máy")
+                } else {
+                    let mess = prompt("Nhập tin nhắn");
+                    this.receivemess.push(mess);
+                    this.battery--;
+                }
+            }
+
+            this.setmess = function () {
+                if (this.status == false || this.battery == 0) {
+                    this.status = false
+                    alert("Vui lòng bật máy")
+                } else {
+                    let mess = prompt("Nhập tin nhắn");
+                    this.sendmess.push(mess);
+                    this.battery--;
+                }
+            }
+
+            this.chargeBattery = function () {
+                for (let i = this.battery; i < 100; i++) {
+                    this.battery++
+                }
+                return this.battery
+            }
+
+
+            this.editmess = function () {
+                if (this.status == false || this.battery == 0) {
+                    this.status = false
+                    alert("Vui lòng bật máy")
+                } else {
+                    let mess = prompt("Nhập tin nhắn");
+                    this.draftmess.push(mess);
+                    this.battery--;
+                }
+            }
+
+            this.showReceivemess = function () {
+                if (this.status == false || this.battery == 0) {
+                    this.status = false
+                    alert("Vui lòng bật máy");
+                } else {
+                    console.log(this.receivemess)
+                    this.battery--;
+                }
+            }
+
+            this.showSendmess = function () {
+                if (this.status == false || this.battery == 0) {
+                    this.status = false
+                    alert("Vui lòng bật máy")
+                } else {
+                    console.log(this.sendmess)
+                    this.battery--;
+                }
+            }
+
+        }
+
+        let sony = new mobile(80, [], [], [], true);
+        // console.log(sony);
+        sony.getmess();
+        sony.getmess();
+        // sony.setmess();
+        // sony.chargeBattery();
+        // sony.turnMobile();
+        // console.log(sony);
+        // sony.turnMobile();
+        // console.log(sony);
+        // sony.showReceivemess();
+        console.log(sony);
+        sony.battery = '0';
+        console.log(sony);
+        sony.showReceivemess();
+        console.log(sony);
+        sony.chargeBattery();
+        console.log(sony);
+        sony.getmess();
+        // sony.turnMobile();
+            // console.log(sony);
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
