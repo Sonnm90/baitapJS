@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let rectange = function (width, height) {
+            this.width = width;
+            this.height = height;
+            this.getArea = function getArea() {
+                let area = width * height;
+                return area;
+            }
+            this.getPerimeter = function getPerimeter() {
+                let perimeter = (width + height) * 2;
+                return perimeter;
+            }
+        }
+
+        let rectange1 = new rectange(40, 20);
+
+        console.log(rectange1);
+        console.log(rectange1.getArea());
+    </script>
+</body>
+
+</html>
