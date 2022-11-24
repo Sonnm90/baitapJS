@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="game"></div>
+    <script>
+        function Hero(image, top, left, size) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+            this.getHeroElement = function () {
+                return (
+                    '<img width="' + this.size + '"'
+                    + ' height="' + this.size + '"'
+                    + ' src="' + this.image + '"'
+                    + ' style="top: ' + this.top + 'px; left: ' + this.left + 'px; position: absolute; " />');
+            };
+            this.moveRight = function () {
+                this.left += 20;
+                console.log('ok: ' + this.left);
+            }
+
+            this.moveDown = function () {
+                this.top += (20);
+                console.log('ok: ' + this.left);
+            }
+            this.moveBack = function () {
+                this.left -= 20;
+                console.log('ok: ' + this.left);
+            }
+            this.moveUp = function () {
+                this.top -= (20);
+                console.log('ok: ' + this.left);
+            }
+
+
+        }
+
+        var hero = new Hero('https://www.gifcen.com/wp-content/uploads/2022/02/among-us-gif-4.gif', 20, 30, 50, 100);
+        function start() {
+            if ((hero.left < window.innerWidth - hero.size) && (hero.top < window.innerHeight - hero.size)) {
+                hero.moveRight();
+            }
+            if (hero.left > window.innerWidth - hero.size) {
+                hero.moveDown();
+            }
+            if (hero.top > window.innerHeight - hero.size) {
+                hero.moveBack();
+            }
+
+
+
+            document.getElementById('game').innerHTML = hero.getHeroElement();
+            setTimeout(start, 50)
+        }
+        start();
+    </script>
+</body>
+
+</html>

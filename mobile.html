@@ -10,7 +10,7 @@
 
 <body>
     <script>
-        function mobile(battery, draftmess, receivemess, sendmess, status) {
+        function Mobile(battery, draftmess, receivemess, sendmess, status) {
             this.battery = battery
             this.draftmess = []
             this.receivemess = []
@@ -109,7 +109,7 @@
 
         }
 
-        let sony = new mobile(80, [], [], [], true);
+        let sony = new Mobile(80, [], [], [], true);
         // console.log(sony);
         sony.getmess();
         sony.getmess();
