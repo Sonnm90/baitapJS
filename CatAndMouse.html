@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var Mouse = function (name, mweight, mspeed) {
+            this.name = name
+            this.weight = mweight
+            this.mspeed = mspeed
+            this.mstatus = true
+            this.actionMouse = function () {
+                if (this.mstatus == true) {
+                    console.log("chit chit")
+                }
+            }
+
+        }
+        var Cat = function (name, weight, cspeed) {
+            this.name = name
+            this.weight = weight
+            this.cspeed = cspeed
+            this.actionCat = function () {
+                console.log("Meo meo")
+            }
+            this.getMouse = function (mouse) {
+                this.mouse = mouse
+            }
+            this.catchMouse = function (weight) {
+                if (this.cspeed > this.mouse.mspeed) {
+                    this.mouse.mstatus = false
+                    this.weight += this.mouse.mweight
+                    return this.weight
+                }
+            }
+        }
+
+        var mouse1 = new Mouse("jerry", 20, 20);
+        var cat1 = new Cat("Tom", 40, 30);
+        cat1.getMouse(mouse1);
+        console.log(mouse1);
+        console.log(cat1);
+        console.log(cat1.weight);
+
+        cat1.catchMouse();
+        console.log(mouse1.mstatus);
+        console.log(cat1.weight);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

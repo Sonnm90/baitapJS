@@ -35,24 +35,32 @@
             this.conectStatus = false;
             this.conectToLamp = function (obj) {
                 this.lamp = obj;
-                this.status = true;
+                this.status =
+                    this.conectStatus = true;
+
             };
             this.getStatus = function () {
-                if (this.status) {
+                if (this.conectStatus == true) {
                     console.log(this.lamp.name);
                     console.log(this.lamp.status);
+                } else {
+                    alert(" Chưa kết nối")
                 }
             };
             this.turnOff = function () {
-                if (this.status) {
+                if (this.conectStatus == true) {
                     this.lamp.turnOff();
                     this.getStatus();
+                } else {
+                    alert(" Chưa kết nối")
                 }
             };
             this.turnOn = function () {
-                if (this.status) {
+                if (this.conectStatus == true) {
                     this.lamp.turnOn();
                     this.getStatus();
+                } else {
+                    alert(" Chưa kết nối")
                 }
             }
         }
@@ -66,7 +74,7 @@
         eSwitcher.turnOn();
         console.log(eSwitcher);
         console.log(electric);
-
+        // eSwitcher.conectStatus = false;
         eSwitcher.turnOff();
         console.log(eSwitcher);
         console.log(electric);
