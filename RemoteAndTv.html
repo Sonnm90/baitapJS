@@ -44,8 +44,6 @@
             this.subVolume = function () {
                 this.volume--;
             }
-
-
         }
 
         var Remote = function (name) {
@@ -58,24 +56,26 @@
                 this.conectStatus = true
             }
 
-            this.turnOnTV = function () {
+            this.turnOnOffTV = function () {
                 if (this.tivi.status == false) {
                     this.tivi.status = true
-                    alert("Tivi đã được bật!")
+                    console.log("Tivi đã được bật!")
 
                 } else {
-                    alert("Tivi đang bật!")
-                }
-            }
-            this.turnOffTV = function () {
-                if (this.tivi.status == true) {
+                    // alert("Tivi đang bật!")
                     this.tivi.status = false
-                    alert("Tivi đã được tắt!")
-
-                } else {
-                    alert("Tivi đang tắt rồi!")
+                    console.log("Tivi đã được tắt!")
                 }
             }
+            // this.turnOffTV = function () {
+            //     if (this.tivi.status == true) {
+            //         this.tivi.status = false
+            //         alert("Tivi đã được tắt!")
+
+            //     } else {
+            //         alert("Tivi đang tắt rồi!")
+            //     }
+            // }
             this.gotoChannel = function () {
                 if (this.tivi.status == true) {
                     let num = parseInt(prompt("Nhập kênh"))
@@ -84,7 +84,6 @@
                 } else {
                     alert("Vui lòng bật Tivi!")
                 }
-
             }
 
             this.forwardChannel = function () {
@@ -127,7 +126,8 @@
         ssRemote.conectTV(samsung);
         console.log(ssRemote);
         console.log(samsung);
-        ssRemote.turnOnTV();
+        ssRemote.turnOnOffTV();
+        console.log(samsung);
         ssRemote.forwardChannel();
         ssRemote.gotoChannel();
         ssRemote.forwardChannel();
