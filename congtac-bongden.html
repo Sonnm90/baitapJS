@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var Lamp = function (name) {
+            this.name = name
+            this.status = false
+            this.turnOn = function () {
+                if (this.status == false) {
+                    console.log("đèn đã được bật!")
+                    return this.status = true
+                } else {
+                    console.log("đèn đang bật rồi bạn ơi!")
+                }
+            }
+            this.turnOff = function () {
+                if (this.status == true) {
+                    console.log("đèn đã được tắt!")
+                    return this.status = false
+                } else {
+                    console.log("đèn đang tắt mà bạn ơi!")
+                }
+            }
+        }
+        var Switcher = function () {
+            this.lamp = {};
+            this.conectStatus = false;
+            this.conectToLamp = function (obj) {
+                this.lamp = obj;
+                this.status = true;
+            };
+            this.getStatus = function () {
+                if (this.status) {
+                    console.log(this.lamp.name);
+                    console.log(this.lamp.status);
+                }
+            };
+            this.turnOff = function () {
+                if (this.status) {
+                    this.lamp.turnOff();
+                    this.getStatus();
+                }
+            };
+            this.turnOn = function () {
+                if (this.status) {
+                    this.lamp.turnOn();
+                    this.getStatus();
+                }
+            }
+        }
+
+        let eSwitcher = new Switcher();
+        console.log(eSwitcher);
+        let electric = new Lamp("led");
+        console.log(electric);
+        eSwitcher.conectToLamp(electric);
+        console.log(eSwitcher);
+        eSwitcher.turnOn();
+        console.log(eSwitcher);
+        console.log(electric);
+
+        eSwitcher.turnOff();
+        console.log(eSwitcher);
+        console.log(electric);
+    </script>
+</body>
+
+</html>
