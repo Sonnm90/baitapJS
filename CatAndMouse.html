@@ -32,8 +32,13 @@
             this.getMouse = function (mouse) {
                 this.mouse = mouse
             }
-            this.catchMouse = function (weight) {
+            this.catchMouse = function () {
                 if (this.cspeed > this.mouse.mspeed) {
+                    this.mouse.mstatus = false
+                }
+            }
+            this.eatMouse = function (weight) {
+                if (this.mouse.mstatus == true) {
                     this.mouse.mstatus = false
                     this.weight += this.mouse.mweight
                     return this.weight
