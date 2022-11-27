@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #score {
+            position: absolute;
+            top: 0;
+            left: 20px;
+            right: 0;
+            bottom: 0;
+            color: #fff;
+        }
+
+        #gameOver {
+            width: 200px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            text-align: center;
+            color: #fff;
+        }
+
+
+
+        button:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body onload="onPageLoad()">
+    <div class="container">
+        <canvas id="game" width="200" height="700"></canvas>
+        <h3 id="score">scores: 0</h3>
+        <div id="gameOver" style="display:none">
+            <h2>Game Over</h2>
+            <button onclick="reload()">Chơi lại</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    function onPageLoad() {
+        display();
+        window.addEventListener("keydown", moveSelection);
+    }
+    function moveSelection(event) {
+        switch (event.keyCode) {
+            case 37:
+                car.x = 20;
+                break;
+            case 38:
+                car.y -= 70;
+                break;
+
+            case 39:
+                car.x = 110;
+                break;
+
+            case 40:
+                car.y += 70;
+            // break;
+
+        }
+    }
+
+
+    var canvas = document.getElementById('game');
+    var ctx = canvas.getContext('2d');
+
+    var background = new Image();
+    background.src = "images/duongdua.jpg";
+
+    var carImg = new Image();
+    carImg.src = "images/xe.jpg";
+
+    var trouble1 = new Image();
+    trouble1.src = "images/trouble1.jpg";
+
+    var trouble2 = new Image();
+    trouble2.src = "images/trouble2.jpg";
+
+    var car = {
+        x: 110,
+        y: 620
+    }
+
+    var arrayTrouble = [];
+    arrayTrouble[0] = {
+        x: 20,
+        y: 0,
+    }
+    arrayTrouble[1] = {
+        x: 110,
+        y: 250,
+    }
+
+    function display() {
+        //Vẽ background
+        ctx.drawImage(background, 0, 0, 200, 700);
+        //Vẽ Xe
+        ctx.drawImage(carImg, car.x, car.y, 70, 70);
+
+
+        for (let i = 0; i < arrayTrouble.length; i++) {
+            //Vẽ trouble1
+            ctx.drawImage(trouble1, arrayTrouble[i].x, arrayTrouble[i].y, 70, 70);
+            //Vẽ trouble2
+            ctx.drawImage(trouble2, arrayTrouble[i].x, arrayTrouble[i].y, 70, 70);
+
+            arrayTrouble[i].y += 5
+
+            if (arrayTrouble[i].y == canvas.height / 2 + 300) {
+                arrayTrouble.push({
+                    x: arrayTrouble[i].x,
+                    y: 0
+                })
+            }
+
+            var score = arrayTrouble.length - 2;
+            // if (arrayTrouble[i].y > 620) {
+            //     score++
+            // }
+
+            if (car.x == arrayTrouble[i].x &&
+                ((arrayTrouble[i].y < car.y) && (car.y < arrayTrouble[i].y + 70) ||
+                    (arrayTrouble[i].y < car.y + 70) && (car.y + 70 < arrayTrouble[i].y + 70))) {
+                document.getElementById("gameOver").style.display = "block";
+                document.getElementById("reload").style.display = "block";
+                return;
+            }
+        }
+        document.getElementById('score').innerHTML = "Scores: " + score;
+
+        if (score < 5) {
+            setTimeout(display, 30);
+        } else if (score >= 5 && score < 10) {
+            setTimeout(display, 15);
+        } else if (score >= 10 && score < 30) {
+            setTimeout(display, 5);
+        } else if (score >= 30) {
+            setTimeout(display, 1);
+        }
+    }
+
+    function reload() {
+        window.location.reload()
+    }
+
+</script>
+
+</html>

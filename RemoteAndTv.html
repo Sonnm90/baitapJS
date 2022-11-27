@@ -67,6 +67,7 @@
                     console.log("Tivi đã được tắt!")
                 }
             }
+
             // this.turnOffTV = function () {
             //     if (this.tivi.status == true) {
             //         this.tivi.status = false
@@ -76,6 +77,7 @@
             //         alert("Tivi đang tắt rồi!")
             //     }
             // }
+
             this.gotoChannel = function () {
                 if (this.tivi.status == true) {
                     let num = parseInt(prompt("Nhập kênh"))
@@ -95,6 +97,7 @@
                     alert("Vui lòng bật Tivi!")
                 }
             }
+
             this.backChannel = function () {
                 if (this.tivi.status == true) {
                     this.tivi.subChannel();
@@ -103,6 +106,7 @@
                     alert("Vui lòng bật Tivi!")
                 }
             }
+
             this.upVolume = function () {
                 if (this.tivi.status == true) {
                     this.tivi.addVolume();
@@ -111,6 +115,7 @@
                     alert("Vui lòng bật Tivi!")
                 }
             }
+
             this.downVolume = function () {
                 if (this.tivi.status == true) {
                     this.tivi.subVolume();
