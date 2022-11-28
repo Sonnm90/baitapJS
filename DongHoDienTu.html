@@ -35,6 +35,7 @@
         aud.src = "/images/audio.mp3";
         console.log(typeof aud.controls);
         aud.autoplay = true;
+        aud.preload = "auto";
         // aud.controls = true;
         let div = document.getElementById("music");
         div.appendChild(aud);
@@ -55,12 +56,14 @@
 
         body.background = bg[randomBg];
         body.style.backgroundSize = "100%";
+
         // body.style.backgroundRepeat = "no-repeat"
         // body.style.backgroundAttachment = "fixed"
     }
 
     // playMusic();
-    setTimeout(playMusic, 10);
+    setInterval(playMusic, 30000);
+    // setTimeout(playMusic, 10);
     // setBackground();
     setInterval(setBackground, 2000);
 
