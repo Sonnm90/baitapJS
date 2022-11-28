@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Danh sách cầu thủ</h1>
+    <ul id="demo">
+        <li></li>
+        <li></li>
+        <li></li>
+
+    </ul>
+    <button> Change</button>
+    <input id="add" type="text" placeholder="Nhập tên">
+
+</body>
+<script>
+    var list = document.querySelectorAll('li');
+    console.log(list);
+    list[0].innerHTML = "Ronaldo";
+    console.log(list);
+    list[1].innerHTML = "Messi";
+    list[2].innerHTML = "Neymar";
+
+    let check = document.querySelector('button');
+    check.addEventListener('click', function () {
+        let li = document.createElement("li");
+        console.log(li);
+        li.innerText = prompt("Nhập tên");
+        console.log(li);
+        let ul = document.getElementById("demo");
+        ul.appendChild(li);
+    });
+
+    let input = document.querySelector("input");
+    input.addEventListener('keypress', function (data) {
+        let myInput = document.getElementById("add");
+
+        // function
+        // let li = document.createElement("li");
+        // li.innerText = data.key;
+        // let ul = document.getElementById("demo");
+        // ul.appendChild(li);
+    })
+
+
+
+
+</script>
+
+</html>
