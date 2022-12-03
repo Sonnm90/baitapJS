@@ -364,6 +364,7 @@
     </div>
 </body>
 <script>
+
     document.addEventListener('DOMContentLoaded', function () {
         // Mong muốn của chúng ta
         Validator({
@@ -382,6 +383,8 @@
             onSubmit: function (data) {
                 // Call API
                 console.log(data);
+                console.log(typeof data);
+
 
             }
         });
@@ -630,12 +633,34 @@
         hideEye.style.display = "none";
         password.focus();
     }
-    if (typeof (Storage) !== "undefined") {
-        var domain = localStorage.getItem('domain');
-        document.write(domain); // kết quả javascript.info
-    } else {
-        document.write('Trình duyệt của bạn không hỗ trợ local storage');
-    }
+    // if (typeof (Storage) !== "undefined") {
+    //     var domain = localStorage.getItem('domain');
+    //     document.write(domain); // kết quả javascript.info
+    // } else {
+    //     document.write('Trình duyệt của bạn không hỗ trợ local storage');
+    // }
+ 
+
+
+    // let name = document.getElementById("fullname");
+    // let password = document.getElementById("password");
+
+
+    // let arrListPlayer = [];
+    // let control = document.getElementsByClassName("form-submit");
+    // control.addEventListener("click", function () {
+    //     // Thêm player vào bộ nhớ trình duyệt
+    //     arrListPlayer.push({
+    //         name: name.value,
+    //         password: password.value,
+
+    //     });
+    //     console.log(arrListPlayer);
+    //     //   console.log(JSON.stringify(arrListPlayer));
+
+    //     localStorage.setItem("worldcup", JSON.stringify(arrListPlayer));
+    // });
+
 
 </script>
 
